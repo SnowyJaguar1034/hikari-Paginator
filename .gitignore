@@ -94,6 +94,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+paginator-env\
+
 
 # Spyder project settings
 .spyderproject

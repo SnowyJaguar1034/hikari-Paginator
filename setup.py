@@ -1,16 +1,18 @@
 from setuptools import setup
 with open("README.md","r",encoding="utf-8") as fh:
     long_description=fh.read()
-
+    
+name_var = "hikari_Paginator"
+author_var = "SnowyJaguar1034"
 setup(
-    name="dinteractions_Paginator",
-    version="1.5.1",
-    description="Unofficial discord-interactions multi page embed handler",
+    name=name_var,
+    version="0.0.0",
+    description="Unofficial hikari multi page embed handler",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/JUGADOR123/dinteractions-Paginator",
-    author="Jugador123",
-    author_email="momocordova@gmail.com",
+    url="https://github.com/{author_var}/{name_var}",
+    author=author_var,
+    author_email="51423344+SnowyJaguar1034@users.noreply.github.com",
     license="GNU",
     packages=["dinteractions_Paginator"],
     classifiers=[
@@ -19,5 +21,5 @@ setup(
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Operating System :: OS Independent",
     ],
-    install_requires=["discord-py-interactions", "discord.py"],
+    install_requires=["hikari"],
 )

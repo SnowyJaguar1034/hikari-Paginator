@@ -2,21 +2,15 @@ from asyncio import TimeoutError, get_running_loop
 from time import perf_counter
 from typing import List, Optional, Union, Awaitable
 
-from discord import Embed, Emoji, Member, Message, PartialEmoji, Role, User, File
-from discord.abc import User as userUser
-from discord.channel import TextChannel
-from discord.ext.commands import AutoShardedBot, Bot, Context
-from discord.errors import NotFound
-from discord.role import Role as roleRole
+from hikari import Embed, Emoji, Member, Message, PartialEmoji, Role, User, File
+from hikari.abc import User as userUser
+from hikari.channels import GuildTextChannel
+from hikari.commands import AutoShardedBot, Bot, Context
+from hikari.errors import NotFound
+from hikari.role import Role as roleRole
 from discord_slash.context import ComponentContext, InteractionContext
 from discord_slash.model import ButtonStyle
-from discord_slash.utils.manage_components import (
-    create_actionrow,
-    create_button,
-    create_select,
-    create_select_option,
-    wait_for_component,
-)
+from discord_slash.utils.manage_components import create_actionrow, create_button,create_select, create_select_option, wait_for_component
 
 from .errors import BadButtons, BadOnly, IncorrectDataType, TooManyButtons, TooManyFiles
 
@@ -27,7 +21,7 @@ class TimedOut:
         ctx: Union[
             InteractionContext,
             Context,
-            TextChannel,
+            GuildTextChannel,
             User,
             Member,
         ],
@@ -54,7 +48,7 @@ class Paginator:
         ctx: Union[
             InteractionContext,
             Context,
-            TextChannel,
+            GuildTextChannel,
             User,
             Member,
         ],
@@ -150,11 +144,7 @@ class Paginator:
         self.customActionRow = customActionRow
 
         if self.pages is None and not isinstance(self.content, list):
-            raise IncorrectDataType(
-                "both pages and content",
-                "content has to be a list of strings if pages is not used!",
-                self.pages,
-            )
+            raise IncorrectDataType("both pages and content", "content has to be a list of strings if pages is not used!", self.pages,)
 
         # useful variables:
         self.embeds = self.pages[0] is not None
@@ -180,7 +170,7 @@ class Paginator:
         self.incdata(
             "ctx",
             self.ctx,
-            (InteractionContext, Context, TextChannel, User, Member),
+            (InteractionContext, Context, GuildTextChannel, User, Member),
             "InteractionContext, commands.Context, discord.TextChannel, discord.User, or discord.Member",
         )
         self.incdata("pages", self.pages, list, "List[discord.Embed]")

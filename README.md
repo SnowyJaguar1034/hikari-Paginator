@@ -1,14 +1,14 @@
-# dinteractions-Paginator
+# hikari-Paginator
 
-<img src="https://cdn.discordapp.com/attachments/871853650568417310/893303845587931176/dinteractions-Paginator_noloop.gif"></img>
+<!-- <img src="https://cdn.discordapp.com/attachments/871853650568417310/893303845587931176/dinteractions-Paginator_noloop.gif"></img> -->
 
-Unofficial discord-interactions multi-page embed handler
+Unofficial hikari multi-page embed handler
 
-[![Discord](https://img.shields.io/discord/859508565101248582?color=blue&label=discord&style=for-the-badge)](https://discord.gg/UYCaSsMewk) [![PyPI - Downloads](https://img.shields.io/pypi/dm/dinteractions-Paginator?color=blue&style=for-the-badge)](https://pypi.org/project/dinteractions-Paginator/)
+<!-- [![Discord](https://img.shields.io/discord/859508565101248582?color=blue&label=discord&style=for-the-badge)](https://discord.gg/UYCaSsMewk) [![PyPI - Downloads](https://img.shields.io/pypi/dm/dinteractions-Paginator?color=blue&style=for-the-badge)](https://pypi.org/project/dinteractions-Paginator/) -->
 
 ## Table of Contents
 
-(Only works in the [GitHub](https://github.com/JUGADOR123/dinteractions-Paginator/) for some reason)
+<!-- (Only works in the [GitHub](https://github.com/JUGADOR123/dinteractions-Paginator/) for some reason) -->
 
 - [Features](#feats)
 - [Installation](#install)
@@ -31,7 +31,7 @@ Unofficial discord-interactions multi-page embed handler
 - Ability to set the buttons to any emote, color or label
 - Custom buttons
 
-### Join our [Discord server](https://discord.gg/UYCaSsMewk)!
+### Join our [Discord server](https://discord.gg/)!
 
 - Try out example commands,
 - Ask some questions,
@@ -50,18 +50,16 @@ Unofficial discord-interactions multi-page embed handler
 ## <a name="install"></a> Installation
 
 ```
-pip install -U dinteractions-Paginator
+pip install -U hikari-Paginator
 ```
 
 ### <a name="dep"></a> Dependencies
 
-- [discord.py](https://pypi.org/project/discord.py/) (version 1.7.3)
-- [discord-py-interactions](https://pypi.org/project/discord-py-interactions/) (version 3.0.2)
+- [hikari](https://pypi.org/project/hikari/) (version 2.0.0.dev106)
 
 ## <a name="examples"></a> Examples:
 
-These simple examples show how to easily create interactive, multiple page embeds that anyone can interact with that
-automatically deactivate after 60 seconds of inactivity:
+These simple examples show how to easily create interactive, multiple page embeds that anyone can interact with that automatically deactivate after 60 seconds of inactivity:
 
 ### <a name="gif"></a> Example GIF:
 
